@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net472;net8.0;net9.0</TargetFrameworks>
+    <AssemblyName>DexterAuth.SDK</AssemblyName>
+    <RootNamespace>DexterAuth</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>7.3</LangVersion>
+    <DebugType>embedded</DebugType>
+
+    <!-- NuGet Package Metadata -->
+    <PackageId>DexterAuth</PackageId>
+    <Version>1.0.9</Version>
+    <Authors>DexterAuth</Authors>
+    <Company>DexterAuth</Company>
+    <Description>Official C# SDK for DexterAuth - Premium Authentication, Licensing, and Security System. Lightweight, concurrent logger, and zero external dependencies.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageProjectUrl>https://dexterauth.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DexterAuth/DexterAuth-CSharp-Example</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dexterauth authentication license anti-debug security api-client key-system</PackageTags>
+    
+    <!-- Build configurations -->
+    <Deterministic>true</Deterministic>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <!-- Include package README and Logo -->
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <!-- Conditional references for .NET Framework -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>

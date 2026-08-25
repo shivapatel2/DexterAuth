@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dexterauth-sdk"
+version = "1.0.0"
+description = "Official Python SDK for DexterAuth — Premium Authentication, Licensing, and Security System."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "DexterAuth", email = "dvdtbuisness@gmail.com" }
+]
+keywords = [
+    "dexterauth", "authentication", "licensing", "hwid",
+    "security", "anti-cheat", "keygen", "software-protection"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.20.0",
+]
+
+[project.optional-dependencies]
+windows = ["pywin32"]
+
+[project.urls]
+Homepage = "https://dexterauth.com"
+Documentation = "https://dexterauth.com"
+Repository = "https://github.com/DexterAuth/DexterAuth-Python-Example"
+"Bug Tracker" = "https://github.com/DexterAuth/DexterAuth-Python-Example/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dexterauth*"]

@@ -1,0 +1,47 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.dexterauth'
+version = '1.0.0'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    // Zero mandatory external runtime dependencies.
+    // org.json is provided on Android runtime by default; bundled for standard JVM:
+    compileOnly 'org.json:json:20231013'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20231013'
+}
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            pom {
+                name = 'DexterAuth Java & Android SDK'
+                description = 'Official Java & Android SDK for the DexterAuth licensing and authentication platform.'
+                url = 'https://dexterauth.com'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+            }
+        }
+    }
+}

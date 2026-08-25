@@ -1,0 +1,30 @@
+.gradle/
+build/
+bin/
+out/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.aar
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+.cxx/
+local.properties
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
