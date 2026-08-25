@@ -1,0 +1,9 @@
+{
+  "name": "dexterauth",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "cd Discord-Bot && npm install && npm run build",
+    "start": "node Discord-Bot/dist/index.js"
+  }
+}
