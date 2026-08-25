@@ -19,7 +19,7 @@ export interface Config {
 // Validate environment variables
 const discordToken = process.env.DISCORD_TOKEN;
 const clientId = process.env.DISCORD_CLIENT_ID;
-const apiUrl = process.env.AUTH_API_URL || 'http://localhost:3001/api/v1/dev';
+const apiUrl = process.env.AUTH_API_URL || 'https://dexterauth.onrender.com/api/v1/dev';
 const guildId = process.env.DISCORD_GUILD_ID;
 const healthUrl = process.env.BOT_HEALTH_URL;
 const developerRoleId = process.env.DISCORD_DEVELOPER_ROLE_ID;
